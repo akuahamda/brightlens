@@ -24,30 +24,62 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css
     />
   </head>
   <body>
+    <marquee class="font-semibold text-rose-700">Contact Us on 0548675717/0597908071  Contact Us on 0548675717/0597908071  Contact Us on 0548675717/0597908071  Contact Us on 0548675717/0597908071   Contact Us on 0548675717/0597908071</marquee>
     <!-- nav-bar -->
-    <nav class="container mx-auto flex justify-between p-8">
+    
+    <nav class="container mx-auto flex justify-between p-8 relative">
       <div>
-        <img src="images/stpeters2Img 1.png" alt="" />
+        <img src="images/stpeters2Img 1.png" alt="Logo" />
       </div>
-      <div class="md:flex gap-4 text-[#214169] hidden">
-        <a class="hover:text-blue-500" href="#Home">Home</a>
+    
+      <!-- Desktop Navigation (Visible on medium screens and above) -->
+      <div class="hidden md:flex gap-4 text-[#214169]">
+        <a class="hover:text-blue-500" href="index.html#Home">Home</a>
         <a class="hover:text-blue-500" href="#value">Value</a>
         <a class="hover:text-blue-500" href="#about">About</a>
-        <a class="hover:text-blue-500" href="gallary.html">Gallary
+        <a class="hover:text-blue-500" href="gallary.html">Gallery</a>
         <a class="hover:text-blue-500" href="#service">Services</a>
         <a class="hover:text-blue-500" href="#contact">Contact</a>
       </div>
+
+      <div>
+
       <a href="#">
         <button
-          class="md:block border-none rounded-3xl p-2 bg-[#F6075F] text-white w-46 hidden"
+          class="border-none hidden md:block rounded-3xl p-2 bg-[#F6075F] text-white px-5"
         >
           Book Now
         </button>
-        <div class="md:hidden">
-          <img src="images/Menu.png" alt="" />
-        </div>
       </a>
+    
+      <div class="flex items-center">
+        <!-- Mobile Menu Button (Hamburger) -->
+        <div class="md:hidden cursor-pointer" id="menu-btn">
+          <img src="images/Menu.png" alt="Menu Icon" />
+        </div>
+      </div>
+    </div>
     </nav>
+    
+    <!-- Sidebar (Initially Hidden) -->
+    <div
+      id="sidebar"
+      class="fixed inset-0 bg-gray-900 bg-opacity-50 z-50 hidden md:hidden"
+      style="display: none"
+    >
+      <div
+        class="bg-white w-64 h-full p-4 shadow-md flex flex-col items-center gap-4 text-[#214169]"
+      >
+        <a class="hover:text-blue-500" href="#Home">Home</a>
+        <a class="hover:text-blue-500" href="#value">Value</a>
+        <a class="hover:text-blue-500" href="#about">About</a>
+        <a class="hover:text-blue-500" href="gallary.html">Gallery</a>
+        <a class="hover:text-blue-500" href="#service">Services</a>
+        <a class="hover:text-blue-500" href="#contact">Contacts</a>
+      </div>
+    </div>
+    
+    
     <!-- end of nav-bar -->
 
     <!-- hero-section -->
@@ -354,35 +386,37 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css
         Find Us Here
       </h1>
       <div
-        class="flex md:justify-between md:mt-8 md:flex-row flex-col gap-4 p-12"
+        class="flex md:mt-8 md:flex-row flex-col gap-4 p-12 md:justify-between"
       >
         <div
-          class="flex gap-4 md:w-70 border border-[#61ADF8] items-center justify-center p-2 rounded-lg"
+          class="flex gap-4 border border-[#61ADF8] items-center justify-center p-2 rounded-lg"
         >
+        
           <div>
             <img src="images/Phone.png" alt="" />
           </div>
-          <p class="text-[#61ADF8]">031 000 0 000</p>
+          <a href="tel:0597908071" class="text-[#61ADF8]">059-790-8071</a>
         </div>
         <div
-          class="flex gap-4 md:w-70 border border-[#61ADF8] items-center justify-center p-2 rounded-lg"
+          class="flex gap-4 border border-[#61ADF8] items-center justify-center p-2 rounded-lg"
         >
-          <div>
-            <img src="images/Letter.png" alt="" />
-          </div>
-          <p class="text-[#61ADF8]">carenest@gmail.com</p>
-        </div>
-        <div
-          class="flex gap-4 md:w-70 border border-[#61ADF8] items-center justify-center p-2 rounded-lg"
-        >
+        
           <div>
             <img src="images/Location(1).png" alt="" />
           </div>
-          <p class="text-[#61ADF8]">07, East Legon</p>
+          <a href="tel:0597908071" class="text-[#61ADF8]">Chirapatre</a>
+        </div>
+        <div
+          class="flex gap-4 border border-[#61ADF8] items-center justify-center p-2 rounded-lg"
+        >
+          <div>
+            <img src="images/ri_whatsapp-fill.png" alt="" />
+          </div>
+          <a href="https://wa.me/0548675717" class="text-[#61ADF8]">054-867-5717</a>
         </div>
       </div>
       <div class="md:mt-20 flex items-center justify-center p-12">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.936764061002!2d-1.5828146770266458!3d6.654760277969295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb93f25c6c418b%3A0xf1a00b1c66eff63!2sChirapatre%20Estates%20Ashanti%20Region%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1738284549886!5m2!1sen!2sgh" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.936764061002!2d-1.5828146770266458!3d6.654760277969295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb93f25c6c418b%3A0xf1a00b1c66eff63!2sChirapatre%20Estates%20Ashanti%20Region%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1738284549886!5m2!1sen!2sgh" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
     <!-- end of find-us-section -->
@@ -501,11 +535,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css
               <span>24/7</span>
             </div>
             <div class="flex gap-2">
-              <div>
-                <img src="images/Phone.png" alt="" />
-              </div>
-              <span>+233 548 676 717</span>
-              <span>+233 597 908 071</span>
+              <span>Address: Chirapatre Estate,Kumasi Near 72nd Pharmacy</span>
             </div>
             <p class="w-[300px]">
               Our Support and Sales team is available 24 /7 to answer your
@@ -530,6 +560,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css
     </footer>
 
     <!-- end of footer -->
+     <script src="index.js"></script>
 
     <script>
       new Splide(".splide", {
@@ -537,6 +568,32 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css
         perPage: 3,
         gap: 20,
       }).mount();
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.getElementById("menu-btn");
+    const sidebar = document.getElementById("sidebar");
+
+    menuBtn.addEventListener("click", () => {
+      // Toggle the visibility of the sidebar
+      sidebar.classList.toggle("hidden");
+      if (sidebar.classList.contains("hidden")) {
+        sidebar.style.display = "none";
+      } else {
+        sidebar.style.display = "block";
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
     </script>
   </body>
 </html>

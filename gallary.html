@@ -11,8 +11,62 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="index.css" />
   </head>
-  <body></body>
-</html>
+  <body>
+    
+    <!-- nav-bar -->
+    
+    <nav class="container mx-auto flex justify-between p-8 relative">
+      <div>
+        <img src="images/stpeters2Img 1.png" alt="Logo" />
+      </div>
+    
+      <!-- Desktop Navigation (Visible on medium screens and above) -->
+      <div class="hidden md:flex gap-4 text-[#214169]">
+        <a class="hover:text-blue-500" href="index.html#home">Home</a>
+        <a class="hover:text-blue-500" href="gallary.html">Gallery</a>
+      </div>
+
+      <div>
+
+      <a href="#">
+        <button
+          class="border-none hidden md:block rounded-3xl p-2 bg-[#F6075F] text-white px-5"
+        >
+          Book Now
+        </button>
+      </a>
+    
+      <div class="flex items-center">
+        <!-- Mobile Menu Button (Hamburger) -->
+        <div class="md:hidden cursor-pointer" id="menu-btn">
+          <img src="images/Menu.png" alt="Menu Icon" />
+        </div>
+      </div>
+    </div>
+    </nav>
+    
+    <!-- Sidebar (Initially Hidden) -->
+    <div
+      id="sidebar"
+      class="fixed inset-0 bg-gray-900 bg-opacity-50 z-50 hidden md:hidden"
+      style="display: none"
+    >
+      <div
+        class="bg-white w-64 h-full p-4 shadow-md flex flex-col items-center gap-4 text-[#214169]"
+      >
+        <a class="hover:text-blue-500" href="#Home">Home</a>
+        <a class="hover:text-blue-500" href="#value">Value</a>
+        <a class="hover:text-blue-500" href="#about">About</a>
+        <a class="hover:text-blue-500" href="gallary.html">Gallery</a>
+        <a class="hover:text-blue-500" href="#service">Services</a>
+        <a class="hover:text-blue-500" href="#contact">Contacts</a>
+      </div>
+    </div>
+    
+    
+    <!-- end of nav-bar -->
+
+  
 <!-- gallary-section -->
 <div class="container mx-auto mt-8" id="Gallary">
   <div class="relative">
@@ -68,5 +122,24 @@
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.getElementById("menu-btn");
+    const sidebar = document.getElementById("sidebar");
+
+    menuBtn.addEventListener("click", () => {
+      // Toggle the visibility of the sidebar
+      sidebar.classList.toggle("hidden");
+      if (sidebar.classList.contains("hidden")) {
+        sidebar.style.display = "none";
+      } else {
+        sidebar.style.display = "block";
+      }
+    });
+  });
+</script>
+</body>
+</html>
 
 <!-- end of gallary-section -->
