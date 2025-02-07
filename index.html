@@ -24,7 +24,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css
     />
   </head>
   <body>
-    <marquee class="font-semibold text-rose-700">Contact Us on 0548675717/0597908071  Contact Us on 0548675717/0597908071  Contact Us on 0548675717/0597908071  Contact Us on 0548675717/0597908071   Contact Us on 0548675717/0597908071</marquee>
+    <marquee class="font-semibold text-rose-700">Contact Us on 0548675717 / 0597908071  Contact Us on 0548675717 / 0597908071  Contact Us on 0548675717 / 0597908071  Contact Us on 0548675717 / 0597908071   Contact Us on 0548675717 / 0597908071</marquee>
     <!-- nav-bar -->
     
     <nav class="container mx-auto flex justify-between p-8 relative">
@@ -67,9 +67,13 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css
       class="fixed inset-0 bg-gray-900 bg-opacity-50 z-50 hidden md:hidden"
       style="display: none"
     >
+    
       <div
         class="bg-white w-64 h-full p-4 shadow-md flex flex-col items-center gap-4 text-[#214169]"
       >
+      <div class="md:hidden cursor-pointer" id="close-btn">
+        <img src="images/Menu.png" alt="Menu Icon" />
+      </div>
         <a class="hover:text-blue-500" href="#Home">Home</a>
         <a class="hover:text-blue-500" href="#value">Value</a>
         <a class="hover:text-blue-500" href="#about">About</a>
@@ -572,7 +576,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.getElementById("menu-btn");
+    const closeBtn = document.getElementById("close-btn");
     const sidebar = document.getElementById("sidebar");
+    const body = document.querySelector('body');
+
 
     menuBtn.addEventListener("click", () => {
       // Toggle the visibility of the sidebar
@@ -581,6 +588,15 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css
         sidebar.style.display = "none";
       } else {
         sidebar.style.display = "block";
+      }
+    });
+    closeBtn.addEventListener("click", () => {
+      // Toggle the visibility of the sidebar
+      sidebar.classList.toggle("hidden");
+      if (sidebar.classList.contains("hidden")) {
+        sidebar.style.display = "block";
+      } else {
+        sidebar.style.display = "none";
       }
     });
   });
