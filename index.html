@@ -1,57 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BRIGHTLENS EYE CARE CENTER</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="index.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BRIGHTLENS EYE CARE CENTER</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="index.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet" />
+  <script src="
 https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js
 "></script>
-    <link
-      href="
+  <link href="
 https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css
-"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <marquee class="font-semibold text-rose-700">Contact Us on 0548675717 / 0597908071  Contact Us on 0548675717 / 0597908071  Contact Us on 0548675717 / 0597908071  Contact Us on 0548675717 / 0597908071   Contact Us on 0548675717 / 0597908071</marquee>
-    <!-- nav-bar -->
-    
-    <nav class="container mx-auto flex justify-between p-8 relative">
-      <div>
-        <img src="images/stpeters2Img 1.png" alt="Logo" />
-      </div>
-    
-      <!-- Desktop Navigation (Visible on medium screens and above) -->
-      <div class="hidden md:flex gap-4 text-[#214169]">
-        <a class="hover:text-blue-500" href="index.html#Home">Home</a>
-        <a class="hover:text-blue-500" href="#value">Value</a>
-        <a class="hover:text-blue-500" href="#about">About</a>
-        <a class="hover:text-blue-500" href="gallary.html">Gallery</a>
-        <a class="hover:text-blue-500" href="#service">Services</a>
-        <a class="hover:text-blue-500" href="#contact">Contact</a>
-      </div>
+" rel="stylesheet" />
 
-      <div>
+ <style>
+  #sidebar {
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+}
 
+#sidebar:not(.hidden) {
+  transform: translateX(0);
+}
+ </style>
+</head>
+
+<body>
+  <marquee class="font-semibold text-rose-700 flex gap-20 bg-gray-100 p-3">
+
+    <span>Contact Us on 0548675717 / 0597908071</span> --------
+    <span>Contact Us on 0548675717 / 0597908071</span> --------
+    <span>Contact Us on 0548675717 / 0597908071</span> --------
+    <span>Contact Us on 0548675717 / 0597908071</span> --------
+    <span>Contact Us on 0548675717 / 0597908071</span> --------
+    <span>Contact Us on 0548675717 / 0597908071</span> --------
+    <span>Contact Us on 0548675717 / 0597908071</span> --------
+    <span>Contact Us on 0548675717 / 0597908071</span> 
+  </marquee>
+  <!-- nav-bar -->
+
+  <nav class="container mx-auto flex justify-between p-8 sticky top-0 bg-white z-50">
+    <div>
+      <img src="images/stpeters2Img 1.png" alt="Logo" />
+    </div>
+
+    <!-- Desktop Navigation (Visible on medium screens and above) -->
+    <div class="hidden md:flex gap-4 text-[#214169]">
+      <a class="hover:text-blue-500" href="index.html#Home">Home</a>
+      <a class="hover:text-blue-500" href="#value">Value</a>
+      <a class="hover:text-blue-500" href="#about">About</a>
+      <a class="hover:text-blue-500" href="gallary.html">Gallery</a>
+      <a class="hover:text-blue-500" href="#service">Services</a>
+      <a class="hover:text-blue-500" href="#contact">Contact</a>
+    </div>
+
+    <div>
       <a href="#">
-        <button
-          class="border-none hidden md:block rounded-3xl p-2 bg-[#F6075F] text-white px-5"
-        >
+        <button class="border-none hidden md:block rounded-3xl p-2 bg-[#F6075F] text-white px-5">
           Book Now
         </button>
       </a>
-    
+
       <div class="flex items-center">
         <!-- Mobile Menu Button (Hamburger) -->
         <div class="md:hidden cursor-pointer" id="menu-btn">
@@ -59,557 +74,441 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css
         </div>
       </div>
     </div>
-    </nav>
-    
-    <!-- Sidebar (Initially Hidden) -->
-    <div
-      id="sidebar"
-      class="fixed inset-0 bg-gray-900 bg-opacity-50 z-50 hidden md:hidden"
-      style="display: none"
-    >
-    
-      <div
-        class="bg-white w-64 h-full p-4 shadow-md flex flex-col items-center gap-4 text-[#214169]"
-      >
-      <div class="md:hidden cursor-pointer" id="close-btn">
-        <img src="images/Menu.png" alt="Menu Icon" />
-      </div>
-        <a class="hover:text-blue-500" href="#Home">Home</a>
-        <a class="hover:text-blue-500" href="#value">Value</a>
-        <a class="hover:text-blue-500" href="#about">About</a>
-        <a class="hover:text-blue-500" href="gallary.html">Gallery</a>
-        <a class="hover:text-blue-500" href="#service">Services</a>
-        <a class="hover:text-blue-500" href="#contact">Contacts</a>
-      </div>
-    </div>
-    
-    
-    <!-- end of nav-bar -->
+  </nav>
 
-    <!-- hero-section -->
-    <div
-     id="Home" class="container mx-auto flex md:flex-row flex-col bg-gradient-to-tr from-[#82D3FF] from-0% via-[#B6F8FF] via-49% to-[#61ADF8] to-100%"
-    >
-      <div
-        class="md:block self-center p-12 w-full md:flex-1 flex flex-col justify-center items-center"
-      >
-        <h1
-          class="amaranth-bold md:font-bold md:text-[50px] md:text-start  md:leading-12 text-[#214169] text-[32px] md:w-full text-center"
-        >
-          Your Partner in Eye Care & Glasses
-        </h1>
-        <p
-          class="font-normal md:text-xl leading-6 md:mt-8  text-[16px] text-sm text-center w-full md:text-start"
-        >
-          We are committed to providing you with the best eye care and glasses
-          services to help your eye live healthier and happier.
-        </p>
-        <a href="#">
-          <button
-            class="border-none rounded-3xl p-2 bg-[#F6075F] text-white w-[187px] mt-8"
-          >
-            Book A Session
-          </button>
-        </a>
+  <!-- Sidebar (Initially Hidden) -->
+  <div id="sidebar" class="fixed inset-0 bg-gray-900 bg-opacity-50 z-50 hidden" style="display: none">
+    <div class="bg-white w-64 h-full p-4 shadow-md flex flex-col  gap-4 text-[#214169]">
+      <!-- Close Button -->
+      <div class="md:hidden cursor-pointer self-end" id="close-btn">
+        <img src="images/close.png" class="w-5" alt="Menu Icon" />
       </div>
-      <!-- 2nd child -->
-      <div>
-        <div class="flex-1 overflow-hidden px-5 md:px-0">
-          <img src="images/Group 237.png" alt="" />
-        </div>
-      </div>
-      <!-- end of 2nd chid -->
-    </div>
-    <!-- end of hero-section -->
 
-    <!-- value-section -->
-    <div class="container mx-auto" id="value">
+      <!-- Sidebar Links -->
+      <a class="hover:text-blue-500" href="#Home">Home</a>
+      <a class="hover:text-blue-500" href="#value">Value</a>
+      <a class="hover:text-blue-500" href="#about">About</a>
+      <a class="hover:text-blue-500" href="gallary.html">Gallery</a>
+      <a class="hover:text-blue-500" href="#service">Services</a>
+      <a class="hover:text-blue-500" href="#contact">Contact</a>
+    </div>
+  </div>
+
+
+  <!-- end of nav-bar -->
+
+  <!-- hero-section -->
+  <div id="Home"
+    class="container mx-auto flex md:flex-row flex-col bg-gradient-to-tr from-[#82D3FF] from-0% via-[#B6F8FF] via-49% to-[#61ADF8] to-100%">
+    <div class="md:block self-center p-12 w-full md:flex-1 flex flex-col justify-center items-center">
       <h1
-        class="text-center amaranth-bold text-[#F6075F] font-normal md:text-6xl mt-20 text-[38px]"
-      >
-        Our Values
+        class="amaranth-bold md:font-bold md:text-[50px] md:text-start  md:leading-12 text-[#214169] text-[32px] md:w-full text-center">
+        Your Partner in Eye Care & Glasses
       </h1>
-      <!-- second-child -->
-      <div
-        class="flex md:justify-between md:mt-20 md:gap-12 items-center md:flex-row flex-col p-8 gap-5 md:p-0"
-      >
-        <!-- first-child -->
-        <div class="shadow-xl md:p-12 rounded-3xl p-8">
-          <div
-            class="flex gap-4 items-center md:m-8 justify-center md:justify-start m-3"
-          >
-            <div>
-              <img
-                class="bg-blue-500 rounded-2xl"
-                src="images/Trust.png"
-                alt=""
-              />
-            </div>
-            <p class="text-[#F6075F] font-semibold text-3xl text-center">
-              Excellence
-            </p>
-          </div>
-          <p
-            class="text-base md:font-9xl md:leading-[17.54px] text-center text-[12px]"
-          >
-            We believe in treating every patient with kindness and empathy,
-            listening to their concerns, and supporting them through each step
-            of their journey.
-          </p>
-        </div>
-        <!-- end of first-child -->
-        <!-- second-child -->
-        <div class="shadow-xl md:p-12 rounded-3xl p-8">
-          <div
-            class="flex gap-4 items-center md:m-8 justify-center md:justify-start m-3"
-          >
-            <div>
-              <img
-                class="bg-blue-500 rounded-2xl"
-                src="images/Ellipse 3.png"
-                alt=""
-              />
-            </div>
-            <p class="text-[#F6075F] font-semibold text-3xl text-center">
-              Compassion
-            </p>
-          </div>
-          <p
-            class="text-base md:font-lg md:leading-[17.54px] text-center text-[12px]"
-          >
-            We are committed to treating everyone with warmth and compassion,
-            understanding their concerns, and walking with them through every
-            stage of their journey.
-          </p>
-        </div>
-        <!-- end of second-child -->
-        <!-- third-child -->
-        <div class="shadow-xl md:p-12 rounded-3xl p-8">
-          <div
-            class="flex gap-4 items-center md:m-8 justify-center md:justify-start m-3"
-          >
-            <div>
-              <img
-                class="bg-blue-500 rounded-2xl"
-                src="images/Handshake.png"
-                alt=""
-              />
-            </div>
-            <p class="text-[#F6075F] font-semibold text-3xl text-center">
-              Integrity
-            </p>
-          </div>
-          <p
-            class="text-base md:font-lg md:leading-[17.54px] text-center text-[12px]"
-          >
-            We strive to bring compassion and empathy into every interaction,
-            ensuring each person feels heard, valued, and supported on their
-            journey.
-          </p>
-        </div>
-        <!-- end of third-child -->
+      <p class="font-normal md:text-xl leading-6 md:mt-8  text-[16px] text-sm text-center w-full md:text-start">
+        We are committed to providing you with the best eye care and glasses
+        services to help your eye live healthier and happier.
+      </p>
+      <a href="#">
+        <button class="border-none rounded-3xl p-2 bg-[#F6075F] text-white w-[187px] mt-8">
+          Book A Session
+        </button>
+      </a>
+    </div>
+    <!-- 2nd child -->
+    <div>
+      <div class="flex-1 overflow-hidden px-5 md:px-0">
+        <img src="images/Group 237.png" alt="" />
       </div>
     </div>
-    <!-- end of value-section -->
-    <!-- About-section -->
-    <div
-      class="container mx-auto flex md:flex-row flex-col md:gap-16 md:mt-24 items-center" id="about"
-    >
+    <!-- end of 2nd chid -->
+  </div>
+  <!-- end of hero-section -->
+
+  <!-- value-section -->
+  <div class="container mx-auto" id="value">
+    <h1 class="text-center amaranth-bold text-[#F6075F] font-normal md:text-6xl mt-20 text-[38px]">
+      Our Values
+    </h1>
+    <!-- second-child -->
+    <div class="flex md:justify-between md:mt-20 md:gap-12 items-center md:flex-row flex-col p-8 gap-5 md:p-0">
       <!-- first-child -->
-      <div class="md:p-0 p-10">
-        <img src="images/image 6(1).png" alt="" />
+      <div class="shadow-xl md:p-12 rounded-3xl p-8">
+        <div class="flex gap-4 items-center md:m-8 justify-center md:justify-start m-3">
+          <div>
+            <img class="bg-blue-500 rounded-2xl" src="images/Trust.png" alt="" />
+          </div>
+          <p class="text-[#F6075F] font-semibold text-3xl text-center">
+            Excellence
+          </p>
+        </div>
+        <p class="text-base md:font-9xl md:leading-[17.54px] text-center text-[12px]">
+          We believe in treating every patient with kindness and empathy,
+          listening to their concerns, and supporting them through each step
+          of their journey.
+        </p>
       </div>
+      <!-- end of first-child -->
       <!-- second-child -->
-      <div class="md:w-100 md:p-0 p-10">
-        <h1 class="text-[#F6075F] md:text-[64px] text-[40px]">About Us</h1>
-        <p class="text-[#61ADF8] amaranth-regular-italic">BrightLens</p>
-        <h3 class="text-[#214169] text-[28px]">
-          Welcome to BrightLens, a dedicated healthcare provider
-        </h3>
-        <p class="font-normal text-[16px]">
-          At BrightLens we believe in delivering more than just medical
-          services; we’re here to create a supportive, healing environment where
-          patients and families feel valued and understood.
+      <div class="shadow-xl md:p-12 rounded-3xl p-8">
+        <div class="flex gap-4 items-center md:m-8 justify-center md:justify-start m-3">
+          <div>
+            <img class="bg-blue-500 rounded-2xl" src="images/Ellipse 3.png" alt="" />
+          </div>
+          <p class="text-[#F6075F] font-semibold text-3xl text-center">
+            Compassion
+          </p>
+        </div>
+        <p class="text-base md:font-lg md:leading-[17.54px] text-center text-[12px]">
+          We are committed to treating everyone with warmth and compassion,
+          understanding their concerns, and walking with them through every
+          stage of their journey.
+        </p>
+      </div>
+      <!-- end of second-child -->
+      <!-- third-child -->
+      <div class="shadow-xl md:p-12 rounded-3xl p-8">
+        <div class="flex gap-4 items-center md:m-8 justify-center md:justify-start m-3">
+          <div>
+            <img class="bg-blue-500 rounded-2xl" src="images/Handshake.png" alt="" />
+          </div>
+          <p class="text-[#F6075F] font-semibold text-3xl text-center">
+            Integrity
+          </p>
+        </div>
+        <p class="text-base md:font-lg md:leading-[17.54px] text-center text-[12px]">
+          We strive to bring compassion and empathy into every interaction,
+          ensuring each person feels heard, valued, and supported on their
+          journey.
+        </p>
+      </div>
+      <!-- end of third-child -->
+    </div>
+  </div>
+  <!-- end of value-section -->
+  <!-- About-section -->
+  <div class="container mx-auto flex md:flex-row flex-col md:gap-16 md:mt-24 items-center" id="about">
+    <!-- first-child -->
+    <div class="md:p-0 p-10">
+      <img src="images/image 6(1).png" alt="" />
+    </div>
+    <!-- second-child -->
+    <div class="md:w-100 md:p-0 p-10">
+      <h1 class="text-[#F6075F] md:text-[64px] text-[40px]">About Us</h1>
+      <p class="text-[#61ADF8] amaranth-regular-italic">BrightLens</p>
+      <h3 class="text-[#214169] text-[28px]">
+        Welcome to BrightLens, a dedicated eye care provider
+      </h3>
+      <p class="font-normal text-[16px]">
+        At BrightLens, we believe that clear vision is the foundation of a brighter, more vibrant life. Our mission is
+        to provide exceptional eye care services that enhance your vision and overall eye health. With a team of
+        experienced optometrists, state-of-the-art technology, and a patient-centered approach, we are dedicated to
+        helping you see the world with clarity and confidence.
+      </p>
+
+
+    </div>
+  </div>
+  <!-- end of about-section -->
+
+
+  <!-- service-section -->
+  <div class="container mx-auto md:mt-24 mt-4 md:p-0 p-12" id="service">
+    <div class="border-none flex bg-[#82D3FFE8] rounded-md md:py-[20] justify-center items-center">
+      <h1 class="amaranth-bold md:text-[80px] text-[#F6075F] text-[45px]">
+        Services
+      </h1>
+    </div>
+    <!-- second-child -->
+    <div class="grid md:grid-cols-3 lg:grid-cols-6 md:gap-4 md:mt-20 grid-cols-2 mt-10 gap-5">
+      <div class="shadow-xl md:p-4 md:rounded-3xl">
+        <div class="flex justify-center">
+          <img src="images/Siren.png" alt="" />
+        </div>
+        <p class="text-[#214169] text-center md:text-[18px] md:px-2 text-[12px] p-8 rounded">
+          Comprehensive Eye Examination
+        </p>
+      </div>
+      <div class="shadow-xl md:p-4 md:rounded-3xl">
+        <div class="flex justify-center">
+          <img src="images/Siren.png" alt="" />
+        </div>
+        <p class="text-[#214169] text-center md:text-[18px] md:px-2 text-[12px] p-8 rounded">
+          Screening & Outreach Services
+        </p>
+      </div>
+      <div class="shadow-xl md:p-4 md:rounded-3xl">
+        <div class="flex justify-center">
+          <img src="images/Siren.png" alt="" />
+        </div>
+        <p class="text-[#214169] text-center md:text-[18px] md:px-2 text-[12px] p-8 rounded">
+          Management & Treatment of Eye Conditions
+        </p>
+      </div>
+      <div class="shadow-xl md:p-4 md:rounded-3xl">
+        <div class="flex justify-center">
+          <img src="images/Siren.png" alt="" />
+        </div>
+        <p class="text-[#214169] text-center md:text-[18px] md:px-2 text-[12px] rounded p-8">
+          Dispensing of Frames, Lens & Contact Lens
+        </p>
+      </div>
+      <div class="shadow-xl md:p-4 md:rounded-3xl">
+        <div class="flex justify-center">
+          <img src="images/Siren.png" alt="" />
+        </div>
+        <p class="text-[#214169] text-center md:text-[18px] md:px-2 text-[12px] p-8 rounded">
+          Refraction & DVLA Test
+        </p>
+      </div>
+      <div class="shadow-xl md:p-4 md:rounded-3xl">
+        <div class="flex justify-center">
+          <img src="images/Siren.png" alt="" />
+        </div>
+        <p class="text-[#214169] text-center md:text-[18px] md:px-2 text-[12px] p-8 rounded">
+          Home & Corporate Services
         </p>
       </div>
     </div>
-    <!-- end of about-section -->
-    
+  </div>
+  <!-- end of service-section -->
 
-    <!-- service-section -->
-    <div class="container mx-auto md:mt-24 mt-4 md:p-0 p-12" id="service">
-      <div
-        class="border-none flex bg-[#82D3FFE8] rounded-[35px] md:py-[20] justify-center items-center"
-      >
-        <h1 class="amaranth-bold md:text-[80px] text-[#F6075F] text-[45px]">
-          Services
-        </h1>
-      </div>
-      <!-- second-child -->
-      <div
-        class="grid md:grid-cols-3 lg:grid-cols-6 md:gap-4 md:mt-20 grid-cols-2 mt-10 gap-5"
-      >
-        <div class="shadow-xl md:p-4 md:rounded-3xl">
-          <div class="flex justify-center">
-            <img src="images/Siren.png" alt="" />
-          </div>
-          <p
-            class="text-[#214169] text-center md:text-[18px] md:px-2 text-[12px] p-8 rounded"
-          >
-            Comprehensive Eye Examination
-          </p>
-        </div>
-        <div class="shadow-xl md:p-4 md:rounded-3xl">
-          <div class="flex justify-center">
-            <img src="images/Siren.png" alt="" />
-          </div>
-          <p
-            class="text-[#214169] text-center md:text-[18px] md:px-2 text-[12px] p-8 rounded"
-          >
-            Screening & Outreach Services
-          </p>
-        </div>
-        <div class="shadow-xl md:p-4 md:rounded-3xl">
-          <div class="flex justify-center">
-            <img src="images/Siren.png" alt="" />
-          </div>
-          <p
-            class="text-[#214169] text-center md:text-[18px] md:px-2 text-[12px] p-8 rounded"
-          >
-            Management & Treatment of Eye Conditions
-          </p>
-        </div>
-        <div class="shadow-xl md:p-4 md:rounded-3xl">
-          <div class="flex justify-center">
-            <img src="images/Siren.png" alt="" />
-          </div>
-          <p
-            class="text-[#214169] text-center md:text-[18px] md:px-2 text-[12px] rounded p-8"
-          >
-            Dispensing of Frames, Lens & Contact Lens
-          </p>
-        </div>
-        <div class="shadow-xl md:p-4 md:rounded-3xl">
-          <div class="flex justify-center">
-            <img src="images/Siren.png" alt="" />
-          </div>
-          <p
-            class="text-[#214169] text-center md:text-[18px] md:px-2 text-[12px] p-8 rounded"
-          >
-            Refraction & DVLA Test
-          </p>
-        </div>
-        <div class="shadow-xl md:p-4 md:rounded-3xl">
-          <div class="flex justify-center">
-            <img src="images/Siren.png" alt="" />
-          </div>
-          <p
-            class="text-[#214169] text-center md:text-[18px] md:px-2 text-[12px] p-8 rounded"
-          >
-            Home & Corporate Services
-          </p>
-        </div>
-      </div>
+  <!-- book-a-session -->
+  <div
+    class="container mx-auto flex md:mt-24 mt-10 bg-gradient-to-tr from-[#82D3FF] from-100% via-[#B6F8FF] via-100% to-[#61ADF8] to-100%">
+    <!-- first-child -->
+    <div class="md:self-end md:block hidden">
+      <img src="images/32844d82-7977-4c85-a287-79886179d506_removalai_preview 1.png" alt="" />
     </div>
-    <!-- end of service-section -->
-
-    <!-- book-a-session -->
-    <div
-      class="container mx-auto flex md:mt-24 md:p-5 mt-10 bg-gradient-to-tr from-[#82D3FF] from-100% via-[#B6F8FF] via-100% to-[#61ADF8] to-100%"
-    >
-      <!-- first-child -->
-      <div class="md:self-end md:block hidden">
-        <img
-          src="images/32844d82-7977-4c85-a287-79886179d506_removalai_preview 1.png"
-          alt=""
-        />
-      </div>
-      <!-- end-of-first-child -->
-      <!-- second-child -->
-      <div class="md:py-10 p-12">
-        <p class="text-[20px] text-[#61ADF8]">Talk to us</p>
-        <h3 class="amaranth-bold md:text-[64px] text-[#F6075F] text-[35px]">
-          Book A Session
-        </h3>
-        <!-- form -->
-        <form action="">
-          <div class="flex gap-4 md:m-4 md:flex-row flex-col">
-            <div class="flex-1">
-              <label class="text-[#214169]" for="">Name</label><br />
-              <input
-                class="border rounded-lg border-black w-full bg-gradient-to-tr from-[#82D3FF] from-100% via-[#B6F8FF] via-100% to-[#61ADF8] to-100%"
-                type="text"
-              />
-            </div>
-            <div class="flex-1">
-              <label class="text-[#214169]" for="">Phone Number</label>
-              <input
-                class="border rounded-lg border-black w-full bg-gradient-to-tr from-[#82D3FF] from-100% via-[#B6F8FF] via-100% to-[#61ADF8] to-100%"
-                type="text"
-              />
-            </div>
-          </div>
-          <div class="md:m-4 mt-4">
-            <label class="text-[#214169]" for="">Service</label><br />
-            <input
-              class="border rounded-lg border-black w-full bg-gradient-to-tr from-[#82D3FF] from-100% via-[#B6F8FF] via-100% to-[#61ADF8] to-100%"
-              type="text"
-              type="text"
-            />
-          </div>
-          <div class="flex gap-4 md:m-4 mt-4">
-            <div class="flex-1">
-              <label class="text-[#214169]" for="">Preferred Date</label><br />
-              <input
-                class="border rounded-lg border-black w-full bg-gradient-to-tr from-[#82D3FF] from-100% via-[#B6F8FF] via-100% to-[#61ADF8] to-100%"
-                type="text"
-              />
-            </div>
-            <div class="flex-1">
-              <label class="text-[#214169]" for="">Preferred Time</label>
-              <input
-                class="border rounded-lg border-black w-full bg-gradient-to-tr from-[#82D3FF] from-100% via-[#B6F8FF] via-100% to-[#61ADF8] to-100%"
-                type="text"
-              />
-            </div>
-          </div>
-          <button
-            class="border-none rounded-3xl p-3 md:m-4 border-black mt-8 w-full bg-[#61ADF8] text-white"
-          >
-            Book Now
-          </button>
-        </form>
-        <!-- end of form -->
-      </div>
-      <!-- end-of second-child -->
-    </div>
-    <!-- end-of-book-session -->
-    <!-- find us section -->
-    <div class="container mx-auto  md:mt-8 amaranth-bold mt-8" id="contact">
-      <h1 class="text-[#F6075F] md:text-[64px] text-[40px] text-center">
-        Find Us Here
-      </h1>
-      <div
-        class="flex md:mt-8 md:flex-row flex-col gap-4 p-12 md:justify-between"
-      >
-        <div
-          class="flex gap-4 border border-[#61ADF8] items-center justify-center p-2 rounded-lg"
-        >
-        
-          <div>
-            <img src="images/Phone.png" alt="" />
-          </div>
-          <a href="tel:0597908071" class="text-[#61ADF8]">059-790-8071</a>
-        </div>
-        <div
-          class="flex gap-4 border border-[#61ADF8] items-center justify-center p-2 rounded-lg"
-        >
-        
-          <div>
-            <img src="images/Location(1).png" alt="" />
-          </div>
-          <a href="tel:0597908071" class="text-[#61ADF8]">Chirapatre</a>
-        </div>
-        <div
-          class="flex gap-4 border border-[#61ADF8] items-center justify-center p-2 rounded-lg"
-        >
-          <div>
-            <img src="images/ri_whatsapp-fill.png" alt="" />
-          </div>
-          <a href="https://wa.me/0548675717" class="text-[#61ADF8]">054-867-5717</a>
-        </div>
-      </div>
-      <div class="md:mt-20 flex items-center justify-center p-12">
-        <iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.936764061002!2d-1.5828146770266458!3d6.654760277969295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb93f25c6c418b%3A0xf1a00b1c66eff63!2sChirapatre%20Estates%20Ashanti%20Region%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1738284549886!5m2!1sen!2sgh" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-    <!-- end of find-us-section -->
-
-    <!-- upcoming-section -->
-    <div class="container mx-auto md:mt-20">
-      <h3
-        class="amaranth-bold text-[#F6075F] md:text-[64px] text-[40px] p-12 md:mb-8"
-      >
-        Upcoming event
+    <!-- end-of-first-child -->
+    <!-- second-child -->
+    <div class="md:py-10 p-12 self-center">
+      <p class="text-[20px] text-white">Talk to us</p>
+      <h3 class="amaranth-bold md:text-[64px] text-[#F6075F] text-[35px]">
+        Book A Session
       </h3>
-      <section class="splide mb-4" aria-label="Splide Basic HTML Example">
-        <div class="splide__track">
-          <ul class="splide__list">
-            <li class="splide__slide">
-              <img
-                src="images/WhatsApp Image 2025-01-26 at 18.20.28_cb682f91 1.png"
-                alt=""
-              />
-            </li>
-            <li class="splide__slide">
-              <img
-                src="images/WhatsApp Image 2025-01-26 at 18.20.28_cb682f91 1.png"
-                alt=""
-              />
-            </li>
-            <li class="splide__slide">
-              <img
-                src="images/WhatsApp Image 2025-01-26 at 18.20.50_8edbd95f 1.png"
-                alt=""
-              />
-            </li>
-            <li class="splide__slide">
-              <img
-                src="images/WhatsApp Image 2025-01-26 at 18.20.50_8edbd95f 1.png"
-                alt=""
-              />
-            </li>
-            <li class="splide__slide">
-              <img
-                src="images/WhatsApp Image 2025-01-26 at 18.20.50_8edbd95f 1.png"
-                alt=""
-              />
-            </li>
-            <li class="splide__slide">
-              <img
-                src="images/WhatsApp Image 2025-01-26 at 18.20.50_8edbd95f 1.png"
-                alt=""
-              />
-            </li>
-          </ul>
+      <!-- form -->
+      <form class="flex flex-col gap-5">
+        <div class="flex gap-4 md:flex-row flex-col">
+          <div class="flex-1">
+            <label class="text-[#214169]" for="">Name</label><br />
+            <input
+              class="border p-2 rounded-lg border-black w-full bg-gradient-to-tr from-[#82D3FF] from-100% via-[#B6F8FF] via-100% to-[#61ADF8] to-100%"
+              type="text" />
+          </div>
+          <div class="flex-1">
+            <label class="text-[#214169]" for="">Phone Number</label>
+            <input
+              class="border p-2 rounded-lg border-black w-full bg-gradient-to-tr from-[#82D3FF] from-100% via-[#B6F8FF] via-100% to-[#61ADF8] to-100%"
+              type="text" />
+          </div>
         </div>
-      </section>
+        <div class="">
+          <label class="text-[#214169]" for="">Service</label><br />
+          <input
+            class="border p-2 rounded-lg border-black w-full bg-gradient-to-tr from-[#82D3FF] from-100% via-[#B6F8FF] via-100% to-[#61ADF8] to-100%"
+            type="text" />
+        </div>
+        <div class="flex gap-4 ">
+          <div class="flex-1">
+            <label class="text-[#214169]" for="">Preferred Date</label><br />
+            <input
+              class="border p-2 rounded-lg border-black w-full bg-gradient-to-tr from-[#82D3FF] from-100% via-[#B6F8FF] via-100% to-[#61ADF8] to-100%"
+              type="text" />
+          </div>
+          <div class="flex-1">
+            <label class="text-[#214169]" for="">Preferred Time</label>
+            <input
+              class="border p-2 rounded-lg border-black w-full bg-gradient-to-tr from-[#82D3FF] from-100% via-[#B6F8FF] via-100% to-[#61ADF8] to-100%"
+              type="text" />
+          </div>
+        </div>
+        <button class="border-none rounded-3xl p-3 w-full bg-[#61ADF8] text-white">
+          Book Now
+        </button>
+      </form>
+      <!-- end of form -->
     </div>
-    <!-- end of upcoming-section -->
+    <!-- end-of second-child -->
+  </div>
+  <!-- end-of-book-session -->
+  <!-- find us section -->
+  <div class="container mx-auto  md:mt-3 amaranth-bold mt-3" id="contact">
+    <h1 class="text-[#F6075F] md:text-[64px] text-[40px] text-center">
+      Find Us Here
+    </h1>
+    <div class="flex md:flex-row flex-col gap-4 justify-center p-5 md:p-none">
+      <div class="flex gap-4 border border-[#61ADF8] items-center justify-center p-2 rounded-lg">
 
-    <!-- footer -->
-    <footer
-      class="container mx-auto bg-[#353739] md:mt-24 md:w-[1440px] text-[#D0D0CF] md:p-20"
-    >
-      <div
-        class="flex md:justify-between md:items-center md:flex-row flex-col p-12 justify-center items-center"
-      >
         <div>
-          <div class="md:m-12 flex justify-center items-center w-full md:block">
-            <img src="images/stpeters2Img 2.png" alt="" />
+          <img src="images/Phone.png" alt="" />
+        </div>
+        <a href="tel:0597908071" class="text-[#61ADF8]">059-790-8071</a>
+      </div>
+      <div class="flex gap-4 border border-[#61ADF8] items-center justify-center p-2 rounded-lg">
+
+        <div>
+          <img src="images/Location(1).png" alt="" />
+        </div>
+        <a href="tel:0597908071" class="text-[#61ADF8]">Chirapatre</a>
+      </div>
+      <div class="flex gap-4 border border-[#61ADF8] items-center justify-center p-2 rounded-lg">
+        <div>
+          <img src="images/ri_whatsapp-fill.png" alt="" />
+        </div>
+        <a href="https://wa.me/0548675717" class="text-[#61ADF8]">054-867-5717</a>
+      </div>
+    </div>
+    <div class="md:mt-10 flex items-center justify-center rounded-md overflow-hidden">
+      <iframe class=""
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.936764061002!2d-1.5828146770266458!3d6.654760277969295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb93f25c6c418b%3A0xf1a00b1c66eff63!2sChirapatre%20Estates%20Ashanti%20Region%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1738284549886!5m2!1sen!2sgh"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  <!-- end of find-us-section -->
+
+  <!-- upcoming-section -->
+  <div class="container mx-auto md:mt-20">
+    <h3 class="amaranth-bold text-[#F6075F] md:text-[64px] text-[40px] p-12 md:mb-8">
+      Upcoming event
+    </h3>
+    <section class="splide mb-4" aria-label="Splide Basic HTML Example">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <img src="images/WhatsApp Image 2025-01-26 at 18.20.28_cb682f91 1.png" alt="" />
+          </li>
+          <li class="splide__slide">
+            <img src="images/WhatsApp Image 2025-01-26 at 18.20.28_cb682f91 1.png" alt="" />
+          </li>
+          <li class="splide__slide">
+            <img src="images/WhatsApp Image 2025-01-26 at 18.20.50_8edbd95f 1.png" alt="" />
+          </li>
+          <li class="splide__slide">
+            <img src="images/WhatsApp Image 2025-01-26 at 18.20.50_8edbd95f 1.png" alt="" />
+          </li>
+          <li class="splide__slide">
+            <img src="images/WhatsApp Image 2025-01-26 at 18.20.50_8edbd95f 1.png" alt="" />
+          </li>
+          <li class="splide__slide">
+            <img src="images/WhatsApp Image 2025-01-26 at 18.20.50_8edbd95f 1.png" alt="" />
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <!-- end of upcoming-section -->
+
+  <!-- footer -->
+  <footer class="container mx-auto bg-[#353739] md:mt-24 md:w-[1440px] text-[#D0D0CF] md:p-20 pb-10">
+    <div class="flex md:justify-between md:items-center md:flex-row flex-col p-12 justify-center items-center">
+      <div>
+        <div class="md:m-12 flex justify-center items-center w-full md:block">
+          <img src="images/stpeters2Img 2.png" alt="" />
+        </div>
+        <p class="w-[331px] h-[78px] m-8 text-center">
+          Eye Care Center For all
+        </p>
+        <!-- socials -->
+        <div class="flex gap-4 md:m-8 my-4 justify-center md:justify-start animate-bounce">
+          <div class="rounded-full bg-[#61ADF8] w-6 h-6 flex justify-center items-center">
+            <img src="images/facebook.png" alt="" />
           </div>
-          <p class="w-[331px] h-[78px] m-8 text-center">
-            Lorem ipsum dolor sit amet consectetur. Consequat fermentum viverra
-            auctor nibh eleifend sed lorem.
+          <div class="rounded-full bg-[#61ADF8] w-6 h-6 flex justify-center items-center">
+            <img src="images/twitter.png" alt="" />
+          </div>
+          <div class="rounded-full bg-[#61ADF8] w-6 h-6 flex justify-center items-center">
+            <img src="images/linkedin.png" alt="" />
+          </div>
+          <div class="rounded-full bg-[#61ADF8] w-6 h-6 flex justify-center items-center">
+            <img src="images/instagram(1).png" alt="" />
+          </div>
+        </div>
+        <!-- end of socials -->
+      </div>
+      <!-- end of first-child -->
+      <div class="m-12">
+        <h3 class="text-[24px] mb-4 text-center">Pages</h3>
+        <div class="flex flex-col space-y-5">
+          <a class="hover:text-blue-500" href="#Home">Home</a>
+          <a class="hover:text-blue-500" href="#value">Value</a>
+          <a class="hover:text-blue-500" href="#about">About</a>
+          <a class="hover:text-blue-500" href="gallary.html">Gallery</a>
+          <a class="hover:text-blue-500" href="#service">Services</a>
+          <a class="hover:text-blue-500" href="#contact">Contacts</a>
+        </div>
+      </div>
+      <div class="space-y-5 text-center">
+        <h3 class="text-[24px]">Works Hours</h3>
+        <div class="space-y-5">
+          <div class="flex gap-2 justify-center md:justify-start">
+            <div>
+              <img src="images/clock.png" alt="" />
+            </div>
+            <span>24/7</span>
+          </div>
+          <div class="flex gap-2">
+            <span>Address: Chirapatre Estate,Kumasi Near 72nd Pharmacy</span>
+          </div>
+          <p class="w-[300px]">
+            Our Support and Sales team is available 24 /7 to answer your
+            queries
           </p>
-          <!-- socials -->
-          <div
-            class="flex gap-4 md:m-8 my-4 justify-center md:justify-start animate-bounce"
-          >
-            <div
-              class="rounded-full bg-[#61ADF8] w-6 h-6 flex justify-center items-center"
-            >
-              <img src="images/facebook.png" alt="" />
-            </div>
-            <div
-              class="rounded-full bg-[#61ADF8] w-6 h-6 flex justify-center items-center"
-            >
-              <img src="images/twitter.png" alt="" />
-            </div>
-            <div
-              class="rounded-full bg-[#61ADF8] w-6 h-6 flex justify-center items-center"
-            >
-              <img src="images/linkedin.png" alt="" />
-            </div>
-            <div
-              class="rounded-full bg-[#61ADF8] w-6 h-6 flex justify-center items-center"
-            >
-              <img src="images/instagram(1).png" alt="" />
-            </div>
-          </div>
-          <!-- end of socials -->
-        </div>
-        <!-- end of first-child -->
-        <div class="m-12">
-          <h3 class="text-[24px] mb-4">Pages</h3>
-          <div class="flex flex-col space-y-5">
-            <a class="" href="#">About Us</a>
-            <a href="#">Contact info</a>
-            <a href="#">Track Location</a>
-            <a href="#">Career</a>
-          </div>
-        </div>
-        <div class="space-y-5 text-center">
-          <h3 class="text-[24px]">Works Hours</h3>
-          <div class="space-y-5">
-            <div class="flex gap-2 justify-center md:justify-start">
-              <div>
-                <img src="images/clock.png" alt="" />
-              </div>
-              <span>24/7</span>
-            </div>
-            <div class="flex gap-2">
-              <span>Address: Chirapatre Estate,Kumasi Near 72nd Pharmacy</span>
-            </div>
-            <p class="w-[300px]">
-              Our Support and Sales team is available 24 /7 to answer your
-              queries
-            </p>
-          </div>
         </div>
       </div>
-      <div class="container mx-auto px-16">
-        <hr />
+    </div>
+    <div class="container mx-auto px-16">
+      <hr />
+    </div>
+    <div class="container mx-auto flex justify-between px-16 mt-8">
+      <div class="flex gap-4">
+        <span>Copyrights © 2023 BrightLens</span>
+        <span>Design by @HamdaDev</span>
       </div>
-      <div class="container mx-auto flex justify-between px-16 mt-8">
-        <div class="flex gap-4">
-          <span>Copyrights © 2023 BrightLens</span>
-          <span>Design by @HamdaDev</span>
-        </div>
-        <div class="md:flex gap-4 hidden">
-          <span>Terms of Use</span>
-          <span>Privacy Policy</span>
-        </div>
+      <div class="md:flex gap-4 hidden">
+        <span>Terms of Use</span>
+        <span>Privacy Policy</span>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <!-- end of footer -->
-     <script src="index.js"></script>
+  <!-- end of footer -->
+  <script src="index.js"></script>
 
-    <script>
-      new Splide(".splide", {
-        type: "loop",
-        perPage: 3,
-        gap: 20,
-      }).mount();
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const menuBtn = document.getElementById("menu-btn");
-    const closeBtn = document.getElementById("close-btn");
-    const sidebar = document.getElementById("sidebar");
-    const body = document.querySelector('body');
+  <script>
+    new Splide(".splide", {
+      type: "loop",
+      perPage: 3,
+      gap: 20,
+    }).mount();
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuBtn = document.getElementById("menu-btn");
+      const closeBtn = document.getElementById("close-btn");
+      const sidebar = document.getElementById("sidebar");
+      const sidebarLinks = document.querySelectorAll("#sidebar a");
 
+      // Function to toggle sidebar visibility
+      const toggleSidebar = () => {
+        sidebar.classList.toggle("hidden");
+        sidebar.style.display = sidebar.classList.contains("hidden") ? "none" : "block";
+      };
 
-    menuBtn.addEventListener("click", () => {
-      // Toggle the visibility of the sidebar
-      sidebar.classList.toggle("hidden");
-      if (sidebar.classList.contains("hidden")) {
-        sidebar.style.display = "none";
-      } else {
-        sidebar.style.display = "block";
-      }
+      // Open sidebar when menu button is clicked
+      menuBtn.addEventListener("click", toggleSidebar);
+
+      // Close sidebar when close button is clicked
+      closeBtn.addEventListener("click", toggleSidebar);
+
+      // Close sidebar when a link inside the sidebar is clicked
+      sidebarLinks.forEach((link) => {
+        link.addEventListener("click", toggleSidebar);
+      });
     });
-    closeBtn.addEventListener("click", () => {
-      // Toggle the visibility of the sidebar
-      sidebar.classList.toggle("hidden");
-      if (sidebar.classList.contains("hidden")) {
-        sidebar.style.display = "block";
-      } else {
-        sidebar.style.display = "none";
-      }
-    });
-  });
-</script>
+  </script>
 
+</body>
 
-
-
-
-
-
-
-
-    </script>
-  </body>
 </html>
